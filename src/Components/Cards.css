@@ -1,0 +1,45 @@
+.Cards-Container
+{
+    padding:1rem;
+    flex-wrap: wrap;
+    margin:0 1rem;
+}
+
+.Card
+{
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    padding:1rem;
+    border-radius:10px;
+    min-height: 80vh;
+    border:2px solid transparent;
+    margin:1rem;
+}
+
+.Card:hover
+{
+    border:2px solid orangered;
+}
+
+.Card-Title
+{
+    font-size:2rem;
+    color:orangered;
+}
+
+.Img-Cont img
+{
+    width:20vw;
+    height: 15vw;
+}
+
+.Card-Desc
+{
+    color:white;
+}
+
+.Button
+{
+    padding:1rem 2rem;
+    font-size:1.5rem;
+}
