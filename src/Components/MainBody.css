@@ -1,0 +1,61 @@
+:root
+{
+    --main-theme-bg:rgb(255, 255, 255);
+    --main-theme-alt-bg:rgb(233, 233, 233);
+    --main-text-color:#ff00ff;
+}
+
+
+.Main-Body-Cont
+{
+    min-height: 200vh;
+}
+
+.Main-Body-Cont>div
+{
+    min-height:100vh;
+    width: 100vw;
+}
+
+.Main-Body-Cont .Main-Color
+{
+    background-color:var(--main-theme-bg);
+}
+
+.Main-Body-Cont .Alt-Color
+{
+    background-color:var(--main-theme-alt-bg);
+}
+
+.Page-Title
+{
+    color:var(--main-text-color);
+    font-size:5rem;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    border-bottom:4px dashed var(--main-text-color);
+}
+
+.Content-Wrapper
+{
+    width:100%;
+}
+
+.Content-Wrapper img
+{
+    border-radius: 10%;
+    width:40vw;
+    opacity: 0.85;
+    transition:0.5s;
+}
+
+.Content-Wrapper img:hover
+{
+    opacity: 1;
+}
+
+.Page-Desc
+{
+    font-size:1.5rem;   
+    color:black;
+}
