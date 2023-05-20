@@ -1,24 +1,79 @@
-*{padding:0px;margin:0px;box-sizing:border-box;}
-html{font-size:1rem;scroll-behavior:smooth;font-family: 'Oswald', sans-serif;}
-.flex-row-evenly{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center;}
-.flex-column-evenly{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;}
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Castoro+Titling&family=Oswald&family=Teko&display=swap');
 
-.ripple::before
+*{padding:0px;margin:0px;box-sizing: border-box;}
+html{font-size:1rem;font-family:'roboto',sans-serif;scroll-behavior: smooth;}
+
+/* Some variable for css styling are below */
+:root
 {
-    position:absolute;
-    content:'';
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(255,255,255,1);
-    z-index: -1;
-    border-radius: inherit;
+    --main-theme-bg-col:white;
+    --main-theme-bg-alt-col:whitesmoke;
+    --main-theme-text-col:black;
+    --main-theme-text-alt-col:gray;
+
+    --theme-btn-bg-col:orangered;
+    --theme-btn-bg-hov-col:orange;
+    --theme-btn-text-col:black;
+    --theme-btn-text-hov-col:gray;
+
+    --pse-underline1-col:violet;
+    --pse-underline1-thick:4px;
+    --pse-underline2-col:blue;
+    --pse-underline2-thick:4px;
+    --pse-underline3-col:green;
+    --pse-underline3-thick:4px;
+    --pse-underline4-col:cyan;
+    --pse-underline4-thick:4px;
+
+    --btn-e1-col:red;
+    --btn-e2-col:orange;
+    --btn-e3-col:orangered;
+    --btn-e4-col:green;
+
 }
 
-.ripple:hover::before
-{
-    transition:0.9s;
-    transform:scale(1.6);
-    opacity:0;
-}
+/* uni flex styling */
+.flex-r-se-c{display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;}
+.flex-r-sb-c{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.flex-c-se-c{display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;}
+.flex-c-sb-c{display: flex;flex-direction: column;justify-content: space-between;align-items: center;}
+
+.theme-button{border:none;padding:0.8rem 1.6rem;cursor:pointer;background-color:var(--theme-btn-bg-col);color:var(--theme-btn-text-col);border-radius:5px;transition:0.5s;}
+.theme-button:hover{color:var(--theme-btn-text-hov-col);background-color: var(--theme-btn-bg-hov-col);}
+
+.pse-ul1,.pse-ul2,.pse-ul3,.pse-ul4{position:relative;transition:0.8s;overflow: hidden;border-radius:2px;}
+.pse-ul1::before,.pse-ul2::before,.pse-ul3::before,.pse-ul4::before{position:absolute;content:'';bottom:0;left:0;transition:0.5s;}
+
+.pse-ul1:hover{color:var(--pse-underline1-col);}
+.pse-ul1::before{height:var(--pse-underline1-thick);background-color: var(--pse-underline1-col);width:0%;}
+.pse-ul1:hover::before{width: 100%;color:var(--pse-underline1-col);}
+
+.pse-ul2:hover{color:var(--pse-underline2-col);}
+.pse-ul2::before{height:var(--pse-underline2-thick);background-color: var(--pse-underline2-col);width:0%;left:50%;}
+.pse-ul2:hover:before{width:100%;left:0;}
+
+.pse-ul3:hover{color:var(--pse-underline3-col);}
+.pse-ul3::before{height:var(--pse-underline3-thick);background-color: var(--pse-underline3-col);width:0%;left:100%;}
+.pse-ul3:hover:before{width:100%;left:0%;}
+
+.pse-ul4:hover{color:var(--pse-underline4-col);}
+.pse-ul4::before{width:100%;background-color: var(--pse-underline4-col);height: 0;}
+.pse-ul4:hover:before{height:var(--pse-underline4-thick);}
+
+.btn{padding:0.8rem 1.6rem;cursor:pointer;border-radius:5px;transition:0.5s;}
+
+.btn-e1,.btn-e2,.btn-e3,.btn-e4{position:relative;isolation:isolate;}
+.btn-e1::before,.btn-e2::before,.btn-e3::before,.btn-e4::before{position:absolute;content:'';top:0;transition:0.5s;z-index:-1}
+.btn-e1::before,.btn-e2::before{width:0;height: 100%;}
+
+.btn-e1::before{left:0;background-color: var(--btn-e1-col);}
+.btn-e1:hover::before{width: 100%;}
+
+.btn-e2::before{left:100%;background-color: var(--btn-e2-col);}
+.btn-e2:hover::before{width: 100%;left:0%;}
+
+.btn-e3::before{left:0;top:100%;width: 100%;height: 0;background-color: var(--btn-e3-col);}
+.btn-e3:hover::before{height: 100%;top:0%;}
+
+.btn-e4::before{left:50%;top:50%;height: 0;width:0;background-color: var(--btn-e3-col);opacity: 0;border-radius:50%;}
+.btn-e4:hover::before{height: 100%;width: 100%;top:0%;left:0%;opacity:1;border-radius:0;}

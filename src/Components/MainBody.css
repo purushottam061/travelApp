@@ -5,7 +5,6 @@
     --main-text-color:#ff00ff;
 }
 
-
 .Main-Body-Cont
 {
     min-height: 200vh;
@@ -25,6 +24,91 @@
 .Main-Body-Cont .Alt-Color
 {
     background-color:var(--main-theme-alt-bg);
+}
+
+.Home
+{
+    padding-top:15rem;
+}
+
+.Home .Bg-Cont
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.Home .Bg-Cont img
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    opacity:0.4;
+    z-index: 0;
+}
+
+.Home .Quote
+{
+    font-family: 'Oswald', sans-serif;
+    font-size:2rem;
+    color:white;
+    z-index: 10;
+}
+
+.Home .Search-Cont
+{
+    z-index:2;
+    background-color: orangered;
+    border-radius:50px;
+    transition: 0.3s;
+    box-shadow:0 0 30px 1px rgba(200, 200, 200, 0.6);
+    border:2px solid white;
+}
+
+.Home .Search-Cont:hover
+{
+    border:2px solid orangered;
+}
+
+.Search-Cont input
+{
+    font-family: 'Barlow', sans-serif;
+    font-weight: bolder;
+    height:4.8rem;
+    font-size:1.5rem;
+    background-color: white;
+    border-radius:50px 0 0 50px;
+    outline-width: 0;
+    border:none;    
+    transition:0.5s;
+    width:60vw;
+    padding:0.5rem 2rem;
+    border-right:4px solid orangered;
+}
+
+.Search-Cont input:focus
+{
+    color:orangered;
+}
+
+.Home .theme-button
+{
+    border-radius:50px;
+    font-size:1.5rem;
+    color:white;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.Home .theme-button:hover
+{
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px 1px rgba(14, 14, 14, 0.6);
 }
 
 .Page-Title
